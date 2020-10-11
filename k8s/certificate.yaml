@@ -1,0 +1,20 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: coronarating-com-tls
+spec:
+  secretName: coronarating-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: coronarating.com
+  dnsNames:
+    - coronarating.com
+    - www.coronarating.com
+  acme:
+    config:
+      - http01:
+          ingressClass: nginx
+        domains:
+          - coronarating.com
+          - www.coronarating.com
