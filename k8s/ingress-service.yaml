@@ -11,8 +11,8 @@ metadata:
 spec:
   tls:
     - hosts:
-          - coronarating.com
-          - www.coronarating.com
+        - coronarating.com
+        - www.coronarating.com
         secretName: coronarating-com
   rules:
     - host: coronarating.com
