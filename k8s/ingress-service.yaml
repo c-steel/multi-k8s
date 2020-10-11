@@ -30,10 +30,10 @@ spec:
       http:
         paths:
             - backend:
-              serviceName: client-cluster-ip-service
-              servicePort: 3000
+                serviceName: client-cluster-ip-service
+                servicePort: 3000
               path: /?(.*)
-                - backend:
-                    serviceName: server-cluster-ip-service
-                    servicePort: 5000
-                  path: /api/?(.*)
+            - backend:
+                serviceName: server-cluster-ip-service
+                servicePort: 5000
+              path: /api/?(.*)
