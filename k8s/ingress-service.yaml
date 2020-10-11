@@ -13,7 +13,7 @@ spec:
     - hosts:
         - coronarating.com
         - www.coronarating.com
-        secretName: coronarating-com
+      secretName: coronarating-com
   rules:
     - host: coronarating.com
       http:
